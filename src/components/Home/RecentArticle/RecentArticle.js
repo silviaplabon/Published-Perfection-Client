@@ -14,7 +14,7 @@ const RecentArticle = () => {
 
 
     return (
-        <div class="w-full mt-5  p-1 pt-20 xl:pt-0" id="testimonia">
+        <div class="w-full mt-5  p-1 pt-20 xl:pt-0 " id="testimonia">
             <div class="container mx-auto">
                 <div class="text-center">
                     <h5 class="text-5xl  font-title font-semibold text-shark-900 ">Recent Articles</h5>

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Service = () => {
     return (
-        <div class="w-full p-1" id="feature">
-        <div class="text-center py-5 xl:pt-20 xl:pb-36">
+        <div class="w-full p-1 border-dashed border-b-4 border-light-blue-500" id="feature">
+        <div class="text-center py-5 xl:pt-20 xl:pb-8">
             <h5 class="text-2xl text-green-500 font-header">-What We Serve-</h5>
             <h3 class="text-5xl font-bold pt-5 pb-10 font-title">Benefits & Feature</h3>
             <div class="container mx-auto flex flex-wrap lg:flex-nowrap justify-center">

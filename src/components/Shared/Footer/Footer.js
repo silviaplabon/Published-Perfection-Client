@@ -2,71 +2,53 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <nav id="footer" class="bg-gray-500">
-
-        <div class="container mx-auto pt-8 pb-4">
-    
-            <div class="flex flex-wrap overflow-hidden sm:-mx-1 md:-mx-px lg:-mx-2 xl:-mx-2">
-    
-                <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-
-                    <img style="max-width: 70%;height:auto;" class="" src="https://pngimage.net/wp-content/uploads/2019/05/fake-logo-png-.png" alt="Logo"/>
+        <nav id="footer" class="  bg-shark-900">
+        <div class="container mx-auto pt-8  p-5">
+            <div class="flex flex-wrap">
+                <div class="w-1/5 overflow-hidden  pb-6">
+                    <img style={{maxWidth: '70%',height:'auto'}} class="h-12 w-12" src="https://i.ibb.co/7tks09B/pp1-removebg-preview.png" alt="Logo"/>
                 </div>
-    
-                <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-
-    
-    
-                    <h4 class="text-white">Important</h4>
+                <div class="w-4/5 grid grid-cols-3 md:grid-cols-3">
+                <div class="w-full overflow-hidden ">
+                    <h4 class="text-white text-center">Important</h4>
                     <ul class="nav navbar-nav">
-                        <li id="navi-2" class="leading-7 text-sm">
-                            <a class="text-white underline text-small" href="/page-1">
+                        <li id="navi-2" class="leading-7 text-center  text-sm">
+                            <a class="text-white no-underline text-small  text-center" href="/page-1">
                                 Page 1 </a>
                         </li>
-                        <li id="navi-1" class="leading-7 text-sm"><a class="text-white underline text-small" href="/page-2">Page 2</a></li>
+                        <li id="navi-1" class="leading-7  text-center text-sm"><a class="text-white no-underline text-small" href="/page-2">Page 2</a></li>
                     </ul>
-    
-    
                 </div>
-    
-                <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-    
-                    <h4 class="text-white">Info</h4>
+                <div class="w-full overflow-hidden ">
+                    <h4 class="text-white  text-center">Info</h4>
                     <ul class="">
-                    <li id="navi-2" class="leading-7 text-sm">
-                        <a class="text-white underline text-small" href="/page-1">
+                    <li id="navi-2" class="leading-7  text-center text-sm">
+                        <a class="text-white no-underline text-small no-underline " href="/page-1">
                             Page 1 </a>
                     </li>
-                    <li id="navi-1" class="leading-7 text-sm"><a class="text-white underline text-small" href="/page-2">Page 2</a></li>
+                    <li id="navi-1" class="leading-7 text-sm  text-center"><a class="text-white no-underline text-small" href="/page-2">Page 2</a></li>
                     </ul>
                 </div>
-    
-                <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-    
-    
-                    <h4 class="text-white">Products</h4>
+                <div class="w-full overflow-hidden">
+                    <h4 class="text-white  text-center">Products</h4>
                     <ul class="">
-                    <li id="navi-2" class="leading-7 text-sm">
-                        <a class="text-white underline text-small" href="/page-1">
+                    <li id="navi-2" class="leading-7 text-center text-sm">
+                        <a class="text-white underline text-small  text-center no-underline" href="/page-1">
                             Page 1 </a>
                     </li>
-                    <li id="navi-1" class="leading-7 text-sm"><a class="text-white underline text-small" href="/page-2">Page 2</a></li>
+                    <li id="navi-1" class="leading-7 text-sm  text-center"><a class="text-white underline text-small no-underline" href="/page-2">Page 2</a></li>
                     </ul>
                 </div>
-    
             </div>
-    
-    
-    
-    
-            <div class="pt-4 md:flex md:items-center md:justify-center " style="border-top:1px solid white">
-                <ul class="">
-                    <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a class="text-white underline text-small" href="/disclaimer">Disclaimer</a></li>
-                    <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a class="text-white underline text-small" href="/cookie">Cookie policy</a></li>
-                    <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a class="text-white underline text-small" href="/privacy">Privacy</a></li>
+            </div>
+            <div class="pt-4 " style={{borderTop:'1px solid white'}}>
+                <ul class=" flex flex-wrap xl:flex-nowrap justify-center">
+                    <li class="md:mx-2 md:inline leading-7 text-sm mr-2" id="footer-navi-2"><a class="text-white underline text-small no-underline" href="/disclaimer">Disclaimer</a></li>
+                    <li class="md:mx-2 md:inline leading-7 text-sm mr-2" id="footer-navi-2"><a class="text-white underline text-small no-underline" href="/cookie">Cookie policy</a></li>
+                    <li class="md:mx-2 md:inline leading-7 text-sm mr-2" id="footer-navi-2"><a class="text-white underline text-small no-underline" href="/privacy">Privacy</a></li>
                     </ul>
                 </div>
-    
+
     
             </div>
     

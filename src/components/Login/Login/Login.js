@@ -47,7 +47,7 @@ const Login = () => {
       console.log(isFormValid)
     }
     if (event.target.name === 'password') {
-      isFormValid = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/.test(event.target.value);
+      isFormValid =/^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/.test(event.target.value);
       //one upper case,one lower case,one digit,one special character
       console.log(isFormValid)
     }
@@ -125,7 +125,7 @@ const Login = () => {
       setLoggedInUser(res);
     }
   }
-
+console.log(loggedInUser)
   return (
 
     <div className="">
@@ -134,13 +134,13 @@ const Login = () => {
 
         <div className="row container  rowLogin w-2/3 m-auto d-flex justify-content-center align-items-center flex-column">
           <div className="col-md-12 cardSignStyle p-4 mt-5">
-            {authState ? <h5>Login</h5> : <h5 className=" ">Sign Up</h5>}
+            {authState ? <h5 class="font-2xl font-bold">Login</h5> : <h5  class="font-2xl font-bold">Sign Up</h5>}
 
             <form onSubmit={handleSubmit(onSubmit)} id="formsignup" className="">
               {!authState && <div class="flex flex-wrap -mx-3 ">
                 <div class="w-full px-3">
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold " for="grid-password">
-                    Password
+                    Name
                   </label>
                   <input type="text" onBlur={handleChange} name="displayName" placeholder="Your Name" id="inputName" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     ref={register({
@@ -156,7 +156,9 @@ const Login = () => {
 
               <div class="flex flex-wrap -mx-3 ">
                 <div class="w-full px-3">
-
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold " for="grid-password">
+                    Email
+                  </label>
                   <input type="email" onBlur={handleChange} name="email" placeholder="Your Email" id="inputEmail" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 ref={register({
                   required: "*Email is required",
@@ -171,11 +173,15 @@ const Login = () => {
               
               <div class="flex flex-wrap -mx-3 ">
                 <div class="w-full px-3">
-                  <input type="password" onBlur={handleChange} name="password" placeholder="Your Password" id="inputPassword" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold " for="grid-password">
+                  Password
+                  </label>
+                  <input type="password" onBlur={handleChange} name="password" placeholder="Your Password" id="inputPassword" 
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 ref={register({
                   required: "*Password is required",
                   pattern: {
-                    value: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
+                    value: /^(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/,
                     message: "*one upper case,one lower case,one digit,one special character"
                   },
                 })} />
@@ -186,14 +192,14 @@ const Login = () => {
               class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required />}
              
              
-              {authState ? <input type="submit" value="Sign In" class="text-purple-700 text-opacity-100  appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ backgroundColor: '#2d524a' }} /> :
-                <input type="submit" value="Sign Up" class="text-purple-700 text-opacity-100  text-white appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ backgroundColor: '#2d524a' }} />
+              {authState ? <input type="submit" value="Sign In" class=" loginAnchor text-purple-700 text-opacity-100  appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ backgroundColor: '#2d524a' }} /> :
+                <input type="submit" value="Sign Up" class="loginAnchor text-purple-700 text-opacity-100  text-white appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ backgroundColor: '#2d524a' }} />
               }
             </form>
             {
               authState ?
-                <h6 className="fw-light mt-1 text-center">Don't Have an account?<a className="loginAnchor fw-bold fw-lighter  btn text-decoration-none text-warning" onClick={() => setAuthState(!authState)}> Sign Up</a> </h6> :
-                <h6 className="fw-light mt-1 text-center">Already Have an account?<a className="loginAnchor btn fw-bold text-decoration-none text-warning " onClick={() => setAuthState(!authState)}> Sign In</a></h6>
+                <h6 className="fw-light mt-1 text-xl font-bold text-center">Don't Have an account?<a className="loginAnchor font-bold text-2xl   no-underline" onClick={() => setAuthState(!authState)}> Sign Up</a> </h6> :
+                <h6 className="fw-light mt-1 text-xl font-bold text-center">Already Have an account?<a className="loginAnchor font-bold text-2xl  no-underline" onClick={() => setAuthState(!authState)}> Sign In</a></h6>
             }
           </div>
 
@@ -218,7 +224,10 @@ const Login = () => {
            </div></div>
            <div class="flex flex-wrap -mx-3 mt-1 ">
                 <div class="w-full px-3">
-                  <button onClick={handlefacebookSignIn} class=" appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3  leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ color: 'white', backgroundColor: '#4267B2' }}><FontAwesomeIcon className="iconSize" icon={faFacebook} /> Facebook Sign In</button><br />
+                  
+                  <button onClick={handlefacebookSignIn} class=" appearance-none w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3  
+                  leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ color: 'white', backgroundColor: '#4267B2' }}>
+                    <FontAwesomeIcon className="iconSize" icon={faFacebook} /> Facebook Sign In</button><br />
            </div></div>
            
            <div class="flex flex-wrap -mx-3 mt-1">

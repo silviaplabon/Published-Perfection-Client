@@ -14,6 +14,7 @@ import AdminMaker from './components/Admin/AdminMaker/AdminMaker'
 import UserIsAdmin from './components/Shared/UserIsAdmin/UserIsAdmin'
 import AddingBlog from './components/Admin/AddingBlog/AddingBlog'
 import BlogDetailShow from './components/Home/BlogDetailsShow/BlogDetailsShow'
+import AdminBlog from './components/Admin/AdminBlog/AdminBlog';
 export const UserContext = createContext();
 
 
@@ -34,12 +35,19 @@ function App() {
            <Route exact path="/adminBlogPost">
              <AddingBlog></AddingBlog>
            </Route>
+        
+
            <Route exact path="/adminMaker">
              <AdminMaker></AdminMaker>
            </Route>
           <Route exact  path="/login">
             <Login></Login>
           </Route>
+          <Route exact  path="/adminBlogShow">
+             <AdminBlog></AdminBlog>
+          </Route>
+        
+
           <Route exact  path="/blog_detail_show/:id/:state">
           <BlogDetailShow></BlogDetailShow>
           </Route>

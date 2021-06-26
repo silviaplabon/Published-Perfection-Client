@@ -16,7 +16,7 @@ const BlogsShow = ({ blog }) => {
     }
 
     return (
-        <div class="w-4/5 xl:w-1/2   my-5 mx-8 p-8 rounded-2xl border-t-2 border-black-900 ">
+        <div class="w-full xl:w-1/2   my-5 mx-8  rounded-2xl border-t-2 border-black-900 ">
             <img src={imageURL} class=" imageTestimonial h-64  w-full object-cover object-center border-4 border-black-900" />
             <div class="flex  mt-5 items-center">
                 <div class="w-1/3 sm:w-1/6">
@@ -28,9 +28,8 @@ const BlogsShow = ({ blog }) => {
                 </div>
             </div>
             <h6 class="text-2xl font-semibold py-1 font-tilte text-black-900 leading-10">{title}</h6>
-            <p>{trimmedString}...</p> 
-            <button class=" bg-shark-500 rounded p-2 focus:bg-pink-700 text-white"  onClick={() => handleDetailsShow(blog)}>Read <span class="text-pink-dark" >More</span>  <FontAwesomeIcon icon={faArrowRight} /></button>
-
+            <p>{trimmedString}.....</p> 
+            <button class=" bg-white-500 rounded p-2 mt-4 focus:bg-pink-700  text-shark-900 text-white"  onClick={() => handleDetailsShow(blog)}>Read <span class="text-pink-dark" >More</span>  <FontAwesomeIcon icon={faArrowRight} /></button>
         </div>
     );
 };

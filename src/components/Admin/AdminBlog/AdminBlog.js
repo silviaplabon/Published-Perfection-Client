@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import BlogsShow from '../BlogsShow/BlogsShow';
+import AdminSidebar from '../../Shared/AdminSidebar/AdminSidebar';
+import AdminBlogShow from '../AdminBlogShow/AdminBlogShow'
 
-const Blogs = () => {
+const AdminBlog = () => {
 
     const [blogs,setBlogs] = useState([]);
     useEffect(() => {
@@ -15,22 +16,32 @@ const Blogs = () => {
 
 
     return (
+
+
+        <div class=" ">
+        <div class="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-7">
+        <div class=" text-white  ">
+          <AdminSidebar></AdminSidebar>
+        </div>
+        <div class=" text-white col-span-2  mt-20">
         <div class="w-full mt-5  p-1 pt-20 xl:pt-0 border-dashed border-b-4 border-light-blue-500" id="blogSection">
             <div class="container mx-auto">
                 <div class="text-center">
                     <h5 class="text-5xl  font-title font-semibold text-shark-900 ">Blogs</h5>
               
                 </div>
-                <div class="flex flex-wrap xl:flex-nowrap justify-center">
+                <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
                     
                     {
-                        blogs.map(blog=><BlogsShow blog={blog}></BlogsShow>)
+                        blogs.map(blog=><AdminBlogShow blog={blog}></AdminBlogShow>)
                     }
                    
                 </div>
             </div>
         </div>
+        </div>
+        </div></div>
     );
 };
 
-export default Blogs;
+export default AdminBlog;

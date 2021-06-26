@@ -7,19 +7,18 @@ import './BlogDetailShow.css'
 
 const BlogDetailsShow = () => {
     const [blog, setBlog] = useState([]);
-    const { _id, title, content, imageURL, date, name, image } = blog;
-
+    
     const { id } = useParams();
     const { state } = useParams();
     useEffect(() => {
-        fetch(` https://blooming-stream-33970.herokuapp.com/find_single_blog/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                setBlog(data);
-            })
+        fetch(`https://blooming-stream-33970.herokuapp.com/find_single_blog/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            setBlog(data);
+        })
     }, [id])
-    console.log(blog)
-    console.log(id);
+    
+    const { _id, title, content, imageURL, date, name, image } = blog;
 
     return (
         <>
@@ -27,10 +26,10 @@ const BlogDetailsShow = () => {
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1  mt-5 p-2 ">
                     <div class="w-7/10 lg:max-w-7/10 lg:flex mx-auto border-4  border-light-blue-500   border-solid md:border-dotted ">
-                        <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="blog">
+                        <div class="lg:w-3/6 lg:h-auto   rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="blog">
                             <img src={imageURL} class="h-full w-full" />
                         </div>
-                        <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                        <div class="lg:w-3/6  border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                             <div class="mb-8">
                                 <div class="text-gray-900 font-bold text-xl mb-2">{title}</div>
                                 <p class="text-gray-700 text-base">{content}</p>

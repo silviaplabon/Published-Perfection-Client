@@ -23,3 +23,18 @@
         border-radius:0.75rem!important;
 
 } */
+@media only screen and (min-device-width: 200px) and (max-device-width: 767px) {
+    .proSidebar{
+        height:60vh;
+        padding-bottom:20px;
+    }
+
+}
+@media only screen and (min-device-width:768px) and (max-device-width:2000px) {
+    .proSidebar{
+        height:130vh;
+        position:fixed;
+        padding-bottom:20px;
+    }
+
+}

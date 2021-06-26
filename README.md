@@ -3,29 +3,34 @@
 #email:silviahero@gmail.com
 #password:123@Hero
 
-This Website developed by React,React-Router,React-hooks,HTML,CSS,Bootstrap
+#email:test@test.com
+#password:#2021dev
 
-Github Repository Client Site: [Published Perfection](https://github.com/silviaplabon/Career_Designer_Client).
+This Website developed by React,React-Router,React-hooks,HTML,CSS,Tailwind css
 
-Github Repository Server Site: [Published Perfection](https://github.com/silviaplabon/Career_Designer_Server ).
+Github Repository Client Site: [Published Perfection](https://github.com/silviaplabon/Published-Perfection-Client).
 
-Live link Client: [Published Perfection](https://career-designer.web.app).
+Github Repository Server Site: [Published Perfection](https://github.com/silviaplabon/Published-Perfection-Server).
 
-Live link Server: [Published Perfection](https://rocky-basin-25437.herokuapp.com/).
+Live link Client: [Published Perfection](https://published-perfection.web.app).
+
+Live link Server: [Published Perfection](https://blooming-stream-33970.herokuapp.com/).
 
 
 ## Available Features
 
-1. Employer can add a job post.
+1. Admin can add a blog.
 
-2. Seeker can make a account and  after this he can also see his account details and applied job collection.
+2. Blog detail show.
 
-3. Firebase authentication. 
+3. Admin can delete a blog.
 
-4. Admin can manage job post.
+4. Firebase authentication. 
 
 5. App has private route.
 
-6. User can send a message.
+6. User can read blog detail.
+
+
 
 
