@@ -14,9 +14,10 @@ const BlogDetailsShow = () => {
         fetch(`https://blooming-stream-33970.herokuapp.com/find_single_blog/${id}`)
         .then(res => res.json())
         .then(data => {
-            setBlog(data);
+            setBlog(data[0]);
         })
     }, [id])
+    console.log(blog)
     
     const { _id, title, content, imageURL, date, name, image } = blog;
 

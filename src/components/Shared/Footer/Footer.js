@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <nav id="footer" class="  bg-shark-900">
+        <nav id="footer" class="  border-dashed border-t-4  border-light-blue-500 bg-bing-500  bg-shark-900">
         <div class="container mx-auto pt-8  p-5">
             <div class="flex flex-wrap">
                 <div class="w-1/5 overflow-hidden  pb-6">

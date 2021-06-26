@@ -29,7 +29,7 @@ const BlogsShow = ({ blog }) => {
             </div>
             <h6 class="text-2xl font-semibold py-1 font-tilte text-black-900 leading-10">{title}</h6>
             <p>{trimmedString}.....</p> 
-            <button class=" bg-white-500 rounded p-2 mt-4 focus:bg-pink-700  text-shark-900 text-white"  onClick={() => handleDetailsShow(blog)}>Read <span class="text-pink-dark" >More</span>  <FontAwesomeIcon icon={faArrowRight} /></button>
+            <button class=" font-oldFont bg-white-500 rounded p-2 mt-4 focus:bg-pink-700  text-shark-900 text-white"  onClick={() => handleDetailsShow(blog)}>Read <span class="text-pink-dark" >More</span>  <FontAwesomeIcon icon={faArrowRight} /></button>
         </div>
     );
 };

@@ -1,12 +1,13 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, 
   theme: {
     extend: {
       fontFamily: {
         'header':'Jomhuria',
          'title':'Benne',
-         'bebas':'Bebas Neue'
+         'bebas':'Bebas Neue',
+         'oldFont':'VT323'
       },
       minHeight:{
         '200':'200px'     

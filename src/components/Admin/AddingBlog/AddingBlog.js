@@ -61,13 +61,13 @@ const AddingBlog = () => {
             <form onSubmit={handleSubmit(onSubmit)} className=" justify-center w-4/5 mx-auto ">
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">Title</label>
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 font-oldFont" for="grid-first-name">Title</label>
                         <input name="title" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                             id="grid-first-name" type="text" placeholder="Jane" defaultValue="" ref={register} />
                     </div>
 
                     <div class="w-full md:w-1/2 px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 font-oldFont" for="grid-last-name">
                             Content
                         </label>
                         <textarea name="content" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded  py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" defaultValue="" ref={register}></textarea>
@@ -78,7 +78,7 @@ const AddingBlog = () => {
                 {/* first name and last name */}
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full px-3">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 font-oldFont" for="grid-password">
                             Cover Image
                         </label>
                         <input name="imageURL"
@@ -87,7 +87,7 @@ const AddingBlog = () => {
 
                     </div>
                 </div>
-                <button type="submit" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                <button type="submit" class="font-oldFont bg-transparent hover:bg-shark-500 text-shark-900 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                     Submit
                 </button>
 
