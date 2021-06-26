@@ -17,7 +17,7 @@ const BlogDetailsShow = () => {
             setBlog(data[0]);
         })
     }, [id])
-    console.log(blog)
+
     
     const { _id, title, content, imageURL, date, name, image } = blog;
 
@@ -53,7 +53,7 @@ const BlogDetailsShow = () => {
                     </div>
             
             {
-                state==false? <RecentArticle></RecentArticle>:<Blogs></Blogs>
+                state==false ? <RecentArticle></RecentArticle>:<Blogs></Blogs>
 
             }
 

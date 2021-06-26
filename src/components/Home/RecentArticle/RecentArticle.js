@@ -5,7 +5,7 @@ import RecentArticleShow from '../RecentArticleShow/RecentArticleShow';
 const RecentArticle = () => {
     const [articles, setArticles] = useState([]);
     useEffect(() => {
-        fetch('  https://blooming-stream-33970.herokuapp.com/blogCollectionShow')
+        fetch('https://blooming-stream-33970.herokuapp.com/blogCollectionShow')
             .then(res => res.json())
             .then(data => {
                 setArticles(data);

@@ -11,7 +11,7 @@ const Blogs = () => {
                 setBlogs(data);
             })
     }, [])
-    console.log(blogs);
+
 
 
     return (

@@ -15,48 +15,47 @@ import UserIsAdmin from './components/Shared/UserIsAdmin/UserIsAdmin'
 import AddingBlog from './components/Admin/AddingBlog/AddingBlog'
 import BlogDetailShow from './components/Home/BlogDetailsShow/BlogDetailsShow'
 import AdminBlog from './components/Admin/AdminBlog/AdminBlog';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute'
 export const UserContext = createContext();
-
-
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-       <Router>
-         <UserIsAdmin></UserIsAdmin>
-        <Switch> 
-           <Route exact path="/">
+      <Router>
+        <UserIsAdmin></UserIsAdmin>
+        <Switch>
+          <Route exact path="/">
             <Home></Home>
-           </Route>
-           <Route exact path="/testimonials">
-             <Testimonials></Testimonials>
-           </Route>
-           <Route exact path="/adminBlogPost">
-             <AddingBlog></AddingBlog>
-           </Route>
-        
+          </Route>
+          <PrivateRoute exact path="/testimonials">
+            <Testimonials></Testimonials>
+          </PrivateRoute>
+          <PrivateRoute exact path="/adminBlogPost">
+            <AddingBlog></AddingBlog>
+          </PrivateRoute>
 
-           <Route exact path="/adminMaker">
-             <AdminMaker></AdminMaker>
-           </Route>
-          <Route exact  path="/login">
+
+          <PrivateRoute exact path="/adminMaker">
+            <AdminMaker></AdminMaker>
+          </PrivateRoute>
+          <Route exact path="/login">
             <Login></Login>
           </Route>
-          <Route exact  path="/adminBlogShow">
-             <AdminBlog></AdminBlog>
-          </Route>
-        
+          <PrivateRoute exact path="/adminBlogShow">
+            <AdminBlog></AdminBlog>
+          </PrivateRoute>
 
-          <Route exact  path="/blog_detail_show/:id/:state">
-          <BlogDetailShow></BlogDetailShow>
-          </Route>
-          <Route exact  path="/footer">
+
+          <PrivateRoute exact path="/blog_detail_show/:id/:state">
+            <BlogDetailShow></BlogDetailShow>
+          </PrivateRoute>
+          <PrivateRoute exact path="/footer">
             <Footer></Footer>
-          </Route>
+          </PrivateRoute>
 
-          </Switch>
-          </Router>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   )
 }

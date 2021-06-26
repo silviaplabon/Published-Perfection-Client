@@ -19,7 +19,7 @@ const UserIsAdmin = () => {
                 else {
                 }
             })
-    }, [loggedInUser.email])
+    }, [loggedInUser?.email])
 
     return (
         <></>

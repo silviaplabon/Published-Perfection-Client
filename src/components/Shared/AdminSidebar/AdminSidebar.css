@@ -1,40 +1,15 @@
 
-@media only screen and (min-device-width: 200px) and (max-device-width: 767px) {
-    .pro-sidebar {
-        color: white!important;
-      
-        width: 100%!important;
-        min-width: 270px;
-    }
-    .gap-7 {
-        gap: 0rem!important;
-    }
-    .adminMakerStyle{
-        margin:0 10%!important;
-        background-color: aqua!important;
-        border-radius:0.75rem!important;
-    }
+a{
+    text-align:center!important;
 }
-
-/* .proSidebarStyle:hover{
-
-        margin:0 10%!important;
-        background-color: aqua!important;
-        border-radius:0.75rem!important;
-
-} */
-@media only screen and (min-device-width: 200px) and (max-device-width: 767px) {
-    .proSidebar{
-        height:60vh;
-        padding-bottom:20px;
-    }
-
+.droppanel1 {
+    padding: 10px;
+    padding-bottom:2px;
+    background:  url(http://spiralpixelthemes.co.uk/rtd/rtd/dark/style/images/texture.png);
+    background-repeat: repeat-x;
 }
-@media only screen and (min-device-width:768px) and (max-device-width:2000px) {
-    .proSidebar{
-        height:130vh;
-        position:fixed;
-        padding-bottom:20px;
-    }
-
+.droppanel2{
+    padding: 10px;
+    background:  url(http://spiralpixelthemes.co.uk/rtd/rtd/dark/style/images/texture.png);
+    background-repeat: repeat-x;
 }

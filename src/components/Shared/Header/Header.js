@@ -5,7 +5,7 @@ import './Header.css'
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    console.log(loggedInUser)
+    
     return (
         <>
         <div class="droppanel1">

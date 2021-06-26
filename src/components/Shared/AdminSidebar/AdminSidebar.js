@@ -1,30 +1,34 @@
-import React, { useContext } from 'react';
-import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
-import { Link } from 'react-router-dom';
-import { UserContext } from '../../../App';
+import React, { useContext, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { UserContext } from '../../../App'
 import './AdminSidebar.css'
 
 const AdminSidebar = () => {
-    const [loggedInUser,setLoggedInUser]=useContext(UserContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     
     return (
-       
-        <ProSidebar className="w-full proSidebar" >
-            <Menu iconShape="square">
-                <MenuItem className="pt-5 text-center font-oldFont"> Home <Link to="/" /></MenuItem>
-                <MenuItem className="pt-3 text-center font-oldFont "> Admin Maker<Link to="/adminMaker" /></MenuItem>
-                <MenuItem className="pt-5 text-center font-oldFont"> Add A Blog<Link to="/adminBlogPost" /></MenuItem>
-                <MenuItem className="pt-5 text-center font-oldFont"> Blog <Link to="/adminBlogShow" /></MenuItem>
-                <MenuItem className="pt-5 text-center" onClick={() => setLoggedInUser({})} >
-             
-                {loggedInUser.email ? <button onClick={() => setLoggedInUser({})} className=" font-oldFont btn buttonColor text-white logStyle  buttonStyleHeader ms-1">Logout</button> :
-                                <div class="my-auto"> <Link to="/login" class="font-oldFont bg-red-500 py-2  px-4 rounded-lg text-white focus:outline-none text-white">Login</Link></div>
-                            }
-                </MenuItem>   
-            </Menu>
-        </ProSidebar>
-    );
-};
+        <>
+        <div class="droppanel1">
+
+        </div>
+        <header class="font-header-font ">
+            <div class="container bg-bing-900 text-white md:w-full lg:w-4/5 mx-auto border-t-4 border-b-4" >
+                <div class="grid grid-cols-5  justify-center mt-2 mb-2 ">
+                    <Link to="/" class="   text-base font-title md:text-2xl xl:text-4xl  text-end hover:text-green-500 border-r-2">Home</Link>
+                    <Link to="/adminMaker" class="    font-title text-base  md:text-2xl xl:text-4xl   text-end hover:text-green-500  border-r-2">Admin Maker</Link>
+                    <Link to="/adminBlogShow" class="    font-title text-base  md:text-2xl xl:text-4xl   text-end hover:text-green-500  border-r-2">Blogs</Link>
+                    <Link to="/adminBlogPost" class="    font-title text-base  md:text-2xl xl:text-4xl   text-end hover:text-green-500  border-r-2">Add Blog</Link>
+
+                    {loggedInUser.email ? <button onClick={() => setLoggedInUser({})} class="text-base   md:text-2xl  xl:text-4xl   font-title  text-end  hover:text-green-500  border-r-2 ">Logout</button> :
+                        <Link to="/login" class="text-end text-base  md:text-2xl xl:text-4xl  font-title ">Login</Link>}
+                </div>
+              
+            </div>
+
+        </header >
+        <div class="droppanel2"></div>
+        </>
+    )
+}
 
 export default AdminSidebar;

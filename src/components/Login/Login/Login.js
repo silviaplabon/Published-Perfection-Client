@@ -192,8 +192,9 @@ console.log(loggedInUser)
               class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required />}
              
              
-              {authState ? <input type="submit" value="Sign In" class=" loginAnchor text-purple-700 text-opacity-100  appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ backgroundColor: '#2d524a' }} /> :
-                <input type="submit" value="Sign Up" class="loginAnchor text-purple-700 text-opacity-100  text-white appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ backgroundColor: '#2d524a' }} />
+              {authState ? <input type="submit" value="Sign In" class=" loginAnchor text-white text-opacity-100  appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" style={{ backgroundColor: '#2d524a' }} /> :
+                <input type="submit" value="Sign Up" class="loginAnchor text-white text-opacity-100 appearance-none block w-full bg-gray-200  border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                 style={{ backgroundColor: '#2d524a' ,color:'white'}} />
               }
             </form>
             {
