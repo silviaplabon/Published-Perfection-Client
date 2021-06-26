@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faEdit, faBars } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
 import AdminSidebar from '../../Shared/AdminSidebar/AdminSidebar';
 
+
 const AddingBlog = () => {
+    const history=useHistory()
     const { register, handleSubmit, watch, errors } = useForm();
     const [loggedInUser,setLoggedInUser]=useContext(UserContext);
     const [imageURL, setImageURL] = useState(null);
@@ -28,7 +30,7 @@ const AddingBlog = () => {
             },
             body: JSON.stringify(productData)
         })
-            .then(res => { alert('welcome')})
+            .then(res => { alert('welcome'); history.push('/adminBlogShow')})
     };
 
 
@@ -59,7 +61,7 @@ const AddingBlog = () => {
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2 font-oldFont md:text-xl" for="grid-first-name">Title</label>
-                        <input name="title" class="appearance-none block w-full bg-gray-200 text-white border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        <input name="title" class="appearance-none block w-full bg-gray-200 text-shark-900 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                             id="grid-first-name" type="text" placeholder="Jane" defaultValue="" ref={register} />
                     </div>
 
@@ -67,7 +69,7 @@ const AddingBlog = () => {
                         <label class="block uppercase tracking-wide text-white text-xs font-bold mb-2 font-oldFont md:text-xl" for="grid-last-name">
                             Content
                         </label>
-                        <textarea name="content" class="appearance-none block w-full bg-gray-200 text-white border border-red-500 rounded  py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" defaultValue="" ref={register}></textarea>
+                        <textarea name="content" class="appearance-none block w-full bg-gray-200 text-shark-900 border border-red-500 rounded  py-1 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" defaultValue="" ref={register}></textarea>
                     </div>
                     
                    
@@ -79,7 +81,7 @@ const AddingBlog = () => {
                             Cover Image
                         </label>
                         <input name="imageURL"
-                            class="appearance-none block w-full bg-gray-200 text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            class="appearance-none block w-full bg-gray-200 text-shark-900 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                             id="grid-password" type="file" onChange={handleImageUpload} ref={register({ required: true })} placeholder="" />
 
                     </div>

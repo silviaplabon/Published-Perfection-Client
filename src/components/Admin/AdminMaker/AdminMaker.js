@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import AdminSidebar from '../../Shared/AdminSidebar/AdminSidebar';
 
@@ -8,6 +9,7 @@ import AdminSidebar from '../../Shared/AdminSidebar/AdminSidebar';
 
 
 const AdminMaker = () => {
+  const history=useHistory();
   const { register, handleSubmit, watch, errors } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
@@ -23,7 +25,7 @@ const AdminMaker = () => {
       },
       body: JSON.stringify(adminData)
     })
-      .then(res => alert('Admin Entered Successfully'))
+      .then(res => {alert('Admin Entered Successfully');history.push('/')})
   };
 
 
