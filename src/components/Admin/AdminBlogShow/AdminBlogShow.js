@@ -37,7 +37,7 @@ const AdminBlogShow = ({ blog }) => {
             </div>
             <div class="px-6 pt-4 pb-2 flex flex-wrap justify-between content-center">
                <h5 class="text-shark-900">{name}</h5>
-                <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleDelete(_id)}>
+                <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold font-oldFont hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={() => handleDelete(_id)}>
                     Delete
                 </button>
             </div>

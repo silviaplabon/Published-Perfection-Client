@@ -13,3 +13,6 @@ a{
     background:  url(http://spiralpixelthemes.co.uk/rtd/rtd/dark/style/images/texture.png);
     background-repeat: repeat-x;
 }
+.headerStyle{
+    cursor:pointer;
+}
