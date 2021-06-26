@@ -20,7 +20,7 @@ const BlogsShow = ({ blog }) => {
             <img src={imageURL} class=" imageTestimonial h-64  w-full object-cover object-center border-4 border-black-900" />
             <div class="flex  mt-5 items-center">
                 <div class="w-1/3 sm:w-1/6">
-                    <img src={image} class="rounded-full h-14 w-14"/>
+                    <img src={image} class="  imageTestimonial  rounded-full h-14 w-14"/>
                 </div>
                 <div class="w-2/3 sm:w-5/6">
                     <h5 class="px-5  text-black-600 text-lg font-semibold">{name}</h5>
